@@ -1,0 +1,27 @@
+.item-carrinho {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+}
+
+.item-carrinho p {
+    color: #fff;
+}
+
+.item-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.item-container a {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 2.5rem;
+}

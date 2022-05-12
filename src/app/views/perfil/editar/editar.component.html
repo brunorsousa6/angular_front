@@ -1,0 +1,32 @@
+<app-inner-header></app-inner-header>
+
+<main class="editar">
+    <form
+    #form="ngForm"
+    (ngSubmit)="atualizaCadastro($event)"
+    [formGroup]="cadastroForm"
+    id="cadastro-form"
+    *ngIf="showForm"
+    >
+        <h1>Editar Perfil:</h1>
+        <p>Campos com * são obrigatórios</p>
+        
+        <div class="form-input" *ngFor="let input of formInputs; index as i;">
+            <label for="{{ input.name }}">
+                {{ input.label }}
+                <span *ngIf="input.obrigatorio">*</span>
+            </label>
+            <input type="{{ input.type }}" name="{{ input.name }}" formControlName="{{ input.name }}" [readonly]="input.name === 'email'" [class.invalid-input]="form.submitted && !cadastroForm.get(input.name)?.valid">
+        </div>
+
+        <div class="buttons">
+            <button type="submit" class="simple-button-blue">Enviar</button>
+            <a [routerLink]="['..']" class="simple-button-red">Voltar</a>
+        </div>
+    </form>
+
+    <section class="finished" *ngIf="!showForm">
+        <h2>{{ isFormSucess ? 'Perfil atualizado com sucesso!' : 'Falha ao realizar a atualização. Tente novamente mais tarde.' }}</h2>
+        <a [routerLink]="['..']" class="simple-button-blue">Voltar</a>
+    </section>
+</main>

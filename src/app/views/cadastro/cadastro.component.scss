@@ -1,0 +1,62 @@
+.main {
+    height: 100vh;
+    min-height: 600px;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.main .header {
+    position: absolute;
+    top: 5.5rem;
+}
+
+.header h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.header p {
+    font-weight: 100;
+    font-size: 1rem;
+}
+
+.start-form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.start-form {
+    height: 100vh;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.start-form div {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+button {
+    margin-top: 3rem;
+
+}
+
+@media only screen and (min-width: 768px) {
+
+    .main form {
+        display: initial;
+    }
+
+}

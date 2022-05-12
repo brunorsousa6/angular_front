@@ -1,0 +1,76 @@
+.produto {
+    background-color: #00386f;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 90vw;
+    position: relative;
+}
+
+.produto p {
+    color: #fff;
+    font-weight: 100;
+}
+
+.produto span {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.produto-form {
+    display: flex;
+    align-items: center;
+}
+
+.produto-form p {
+    margin-right: 0.5rem;
+}
+
+.produto-form select {
+    height: 39px;
+    width: 3rem;
+}
+
+.adicionado {
+    background-color: #5cdb94;
+    top: 0.2rem;
+    bottom: 0.2rem;
+    left: 0.2rem;
+    right: 0.2rem;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.adicionado p {
+    color: #00386f;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.display-none {
+    display: none;
+}
+
+.display {
+    opacity: 1;
+    animation: fade 2s linear forwards;
+}
+
+@keyframes fade {
+    0%,100% { opacity: 0 }
+    20%,80% { opacity: 1 }
+}
+
+@media only screen and (min-width: 768px) {
+    
+    .produto {
+        min-width: 22rem;
+        margin: 1rem;
+    }
+}

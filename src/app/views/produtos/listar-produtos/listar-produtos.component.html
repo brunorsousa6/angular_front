@@ -1,0 +1,31 @@
+<app-inner-header></app-inner-header>
+
+<section class="produtos">
+    <h1>Produtos</h1>
+
+    <a [routerLink]="['../cadastro']" class="simple-button-blue">Cadastrar Produto</a>
+    <a [routerLink]="['../../perfil']" class="simple-button-red">Voltar</a>
+
+    <div class="container">
+        <div class="lista">
+            <div class="lista-header">
+                <p>Id</p>
+                <p>Nome</p>
+                <p>Quantidade</p>
+                <p>Valor</p>
+                <p>Ações</p>
+            </div>
+            <div class="lista-itens" *ngFor="let produto of produtosArray; index as i;">
+                <p>{{ produto.idProduto || '-' }}</p>
+                <p>{{ produto.nomeProduto || '-' }}</p>
+                <p>{{ produto.quantidadeProduto || '-' }}</p>
+                <p>{{ (produto.valorProduto | currency:'BRL') || '-' }}</p>
+                <div class="buttons">
+                    <a [routerLink]="['../editar']" [queryParams]="{ idProduto: produto.idProduto, nomeProduto: produto.nomeProduto, quantidadeProduto: produto.quantidadeProduto, valorProduto: produto.valorProduto }" class="simple-button">Editar</a>
+                    <a [routerLink]="['../apagar']" [queryParams]="{ idProduto: produto.idProduto, nomeProduto: produto.nomeProduto }" class="simple-button-red">Apagar</a>
+                </div>
+            </div>
+            <p class="none-message" *ngIf="!produtosArray.length">Nenhum produto para listar.</p>
+        </div>
+    </div>
+</section>

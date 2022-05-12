@@ -1,0 +1,13 @@
+<app-inner-header></app-inner-header>
+
+<section class="perfil">
+    <h1>Olá,</h1>
+    <h2>{{ user.nomeUsuario }}</h2>
+
+    <a [routerLink]="['../produtos/listar']" class="simple-button-blue" *ngIf="user.isProdutor">Meus Produtos</a>
+    <a [routerLink]="['../pedidos/recebidos']" class="simple-button-blue" *ngIf="user.isProdutor">Pedidos Recebidos</a>
+    <a [routerLink]="['../pedidos/listar']" class="simple-button-blue" *ngIf="!user.isProdutor">Meus Pedidos</a>
+    <a [routerLink]="['../perfil/editar']" class="simple-button-blue">Editar Perfil</a>
+    <a (click)="logout()" class="simple-button-blue">Sair</a>
+    <a [routerLink]="['../perfil/apagar']" class="simple-button-red">Apagar Perfil</a>
+</section>

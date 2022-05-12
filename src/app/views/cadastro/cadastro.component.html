@@ -1,0 +1,21 @@
+<app-inner-header></app-inner-header>
+
+<main class="main">
+    <div class="header">
+        <h1>Cadastro</h1>
+        <p>Campos com * são obrigatórios</p>
+    </div>
+    <div class="start-form" *ngIf="showStartForm">
+        <h2>Você é um:</h2>
+        <div>
+            <span class="simple-button-blue" (click)="showStartForm = !showStartForm; showConsumidorForm = !showConsumidorForm;">Consumidor</span>
+            <span class="simple-button-blue" (click)="showStartForm = !showStartForm; showProdutorForm = !showProdutorForm;">Produtor</span>
+        </div>
+    </div>
+    <div class="start-form" *ngIf="showConsumidorForm">
+        <app-cadastro-consumidor (voltarEvent)="showStartForm = !showStartForm; showConsumidorForm = !showConsumidorForm;"></app-cadastro-consumidor>
+    </div>
+    <div class="start-form" *ngIf="showProdutorForm">
+        <app-cadastro-produtor (voltarEvent)="showStartForm = !showStartForm; showProdutorForm = !showProdutorForm;"></app-cadastro-produtor>
+    </div>
+</main>

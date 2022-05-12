@@ -1,0 +1,41 @@
+<main class="container">
+    <section class="main-mapa">
+        <div class="container-mapa">
+            <div id="mapa"></div>
+            <div class="botao-voltar">
+                <a href="/" class="botao">Voltar</a>
+            </div>
+            <!-- <div id="botao-recarregar">
+                <a href="#" class="btn btn-default d-flex justify-content-center align-items-center"><i class="fa fa-refresh" aria-hidden="true"></i></a>
+            </div> -->
+        </div>
+        <div class="pesquisa">
+            <iframe #iframe class="input-pesquisa" [src]="urlSafe"></iframe>
+            <button class="submit-pesquisa"><img src="../../../assets/search_icon_svg.svg" alt="Buscar" (click)="buscaProdutores()"></button>
+        </div>
+        <div class="distancia">
+            <ul>
+                <li>
+                    <input type="radio" id="1km" name="distancia" (click)="distanciaValue = 1" value="1" checked>
+                    <label for="1km">1km</label>
+                </li>
+                <li>
+                    <input type="radio" id="5km" name="distancia" (click)="distanciaValue = 5" value="5">
+                    <label for="5km">5km</label>
+                </li>
+                <li>
+                    <input type="radio" id="10km" name="distancia" (click)="distanciaValue = 10" value="10">
+                    <label for="10km">10km</label>
+                </li>
+                <li>
+                    <input type="radio" id="15km" name="distancia" (click)="distanciaValue = 15" value="15">
+                    <label for="15km">15km</label>
+                </li>
+                <!-- <li>
+                    <input type="radio" id="20km" name="distancia" value="20">
+                    <label for="20km">20km</label>
+                </li> -->
+            </ul>
+        </div>
+    </section>
+</main>

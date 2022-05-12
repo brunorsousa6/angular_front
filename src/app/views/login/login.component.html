@@ -1,0 +1,30 @@
+<app-inner-header></app-inner-header>
+
+<main class="main">
+    <form
+    #form="ngForm"
+    (ngSubmit)="login()"
+    [formGroup]="loginForm"
+    id="login-form"
+    >
+        <h1>Login</h1>
+        <section>
+            <div class="form-input">
+                <label for="email">Email</label>
+                <input type="email" formControlName="email" name="email" [class.invalid-input]="form.submitted && !loginForm.get('email')?.valid">
+            </div>
+            <div class="form-input">
+                <label for="senha">Senha</label>
+                <input type="password" formControlName="senha" name="senha" [class.invalid-input]="form.submitted && !loginForm.get('senha')?.valid">
+            </div>
+        </section>
+        <p *ngIf="isUserValid">Email ou senha incorretos ou não existem.</p>
+
+        <div class="produtor-checkbox">
+            <input formControlName="produtor" type="checkbox" name="produtor" id="produtor">
+            <label for="produtor">Entrar como produtor</label>
+        </div>
+        <button type="submit" class="simple-button">Entrar</button>
+        <!-- <a [routerLink]="['../login']">Esqueci minha senha</a> -->
+    </form>
+</main>

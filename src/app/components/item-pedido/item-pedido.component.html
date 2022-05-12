@@ -1,0 +1,24 @@
+<div class="produto">
+    <p>Nome:</p>
+    <span>{{ produto.nomeProduto || '-' }}</span>
+    <p>Quantidade Disponível:</p>
+    <span>{{ produto.quantidadeProduto || '-' }}</span>
+    <p>Preço Unitário:</p>
+    <span>{{ (produto.valorProduto | currency:'BRL') || '-' }}</span>
+    <form
+    (ngSubmit)="atualizaQtd()"
+    [formGroup]="produtoForm"
+    id="produto-form"
+    class="produto-form"
+    >
+        <p>Qtd:</p>
+        <select formControlName="quantidade" name="qtd" id="qtd">
+            <option [ngValue]="i" *ngFor="let item of [].constructor(10); let i = index;">{{i + 1}}</option>
+        </select>
+        <button type="submit" class="simple-button">{{ textoBotao }}</button>
+    </form>
+
+    <div class="adicionado" [class.display-none]="!itemAdded" [class.display]="itemAdded">
+        <p>Produto adicionado ao carrinho!</p>
+    </div>
+</div>

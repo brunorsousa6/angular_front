@@ -1,0 +1,103 @@
+.main {
+    height: 100vh;
+    min-height: 600px;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #00386f;
+    width: 90vw;
+    height: 50vh;
+    max-width: 300px;
+    min-width: 300px;
+    min-height: 410px;
+}
+
+.main h1 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.main p {
+    color: #fff;
+    padding: 2px;
+    max-width: 80%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.main button {
+    margin-top: 2rem;
+}
+
+.main a {
+    color: #fff;
+    padding: 0.3rem;
+}
+
+.main a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.form-input label {
+    color: #fff;
+    padding: 0.3rem;
+    display: block;
+    text-align: center;
+}
+
+.form-input input {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.0);
+    margin-bottom: 1rem;
+}
+
+.form-input input:hover {
+    border-bottom: 2px solid #cfcfcf;
+}
+
+.form-input input:focus {
+    outline: none !important;
+    border-bottom: 2px solid #a0a0a0;
+}
+
+.form-input input:-webkit-autofill { 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #fff !important;
+}
+
+.invalid-input {
+    border-bottom: 2px solid red !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.produtor-checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.produtor-checkbox label {
+    color: #fff;
+    margin-left: 0.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+    
+    .main form {
+        width: 25vw;
+
+        max-width: initial;
+    }
+}

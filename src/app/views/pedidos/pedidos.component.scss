@@ -1,0 +1,53 @@
+.pedidos {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 3rem;
+}
+
+.produtor {
+    max-width: 80vw;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.produtor p {
+    margin-top: 1rem;
+}
+
+.produtor h2 {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.pedidos > h1 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.none-message {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 2rem;
+    color: #fff;
+    background-color: #00386f;
+    max-width: 80vw;
+}
+
+.lista-produtos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrinho-icon {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+}

@@ -1,0 +1,76 @@
+.pedidos {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.pedidos h1 {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+.container {
+    max-width: 80vw;
+    overflow-x: scroll;
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #00386f;
+    min-width: 750px;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+}
+
+.lista p {
+    color: #fff;
+    text-align: center;
+    margin: auto;
+}
+
+.lista-header, .lista-itens {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) 2fr;
+    width: 100%;
+}
+
+.lista-header {
+    margin-bottom: 1rem;
+}
+
+.lista-header p {
+    font-weight: bolder;
+    font-size: 1.1rem;
+}
+
+.lista-itens {
+    padding: 0.5rem 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons a {
+    width: 6rem;
+    margin: 0 0.75rem;
+}
+
+.none-message {
+    font-size: 1.5rem;
+    padding: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+    
+    .container {
+        overflow-x: initial;
+    }
+}

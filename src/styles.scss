@@ -1,0 +1,85 @@
+/* You can add global styles to this file, and also import other style files */
+*, body, html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #5cdb94;
+}
+
+a, p, span, h1, h2, h3, h4, label {
+    color: #00386f;
+    font-weight: 500;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1em;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+img {
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;  
+}
+
+.simple-button {
+    color: #00386f;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+    background-color: #fff;
+    width: 11rem;
+    margin: 0.75rem;
+    text-align: center;
+    padding: 0.5rem 0;
+    cursor: pointer;
+}
+
+.simple-button:hover {
+    background-color: #cfcfcf;
+}
+
+.simple-button-blue {
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+    background-color: #00386f;
+    width: 11rem;
+    margin: 0.75rem;
+    text-align: center;
+    padding: 0.5rem 0;
+    cursor: pointer;
+}
+
+.simple-button-blue:hover {
+    background-color: #0154a7;
+}
+
+.simple-button-red {
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+    background-color: #7c0000;
+    width: 11rem;
+    margin: 0.75rem;
+    text-align: center;
+    padding: 0.5rem 0;
+    cursor: pointer;
+}
+
+.simple-button-red:hover {
+    background-color: #a70101;
+}

@@ -1,0 +1,35 @@
+<div class="carrinho" (click)="showMenu = !showMenu; pegaItensCarrinho();">
+    <img src="../../../assets/shopping_cart.svg" alt="Carrinho">
+</div>
+
+<nav @myInsertRemoveTrigger *ngIf="showMenu" class="nav">
+
+    <h1 [class.hidden-element]="isPedidoFeito">Meu Carrinho</h1>
+    <div [class.hidden-element]="isPedidoFeito" class="lista-header" *ngIf="listaProdutos">
+        <p>Produto</p>
+        <p>Qtd</p>
+        <p>Preço</p>
+        <p>Ações</p>
+    </div>
+    <div class="carrinho-container" *ngIf="!isPedidoFeito;else elseBlock">
+        <app-item-carrinho *ngFor="let produto of listaProdutos" [produto]="produto" (removerItem)="removerItem($event)"></app-item-carrinho>
+        <div *ngIf="!listaProdutos" class="nenhum-produto">
+            <h2>Nenhum produto no carrinho.</h2>
+        </div>
+    </div>
+    <ng-template #elseBlock>
+        <div class="carrinho-container-sucess" *ngIf="!isPedidoFeitoErro">
+            <h2>Pedido enviado com sucesso!</h2>
+            <p>Por favor, aguarde a página recarregar.</p>
+        </div>
+        <div class="carrinho-container-sucess" *ngIf="isPedidoFeitoErro">
+            <h2>Erro ao enviar o pedido!</h2>
+            <p>Por favor, aguarde a página recarregar.</p>
+        </div>
+    </ng-template>
+
+    <p [class.hidden-element]="isPedidoFeito"><strong>Total:</strong> {{ (totalFinal | currency:'BRL') || '-' }}</p>
+    
+    <a class="simple-button" [class.hidden-element]="isPedidoFeito" (click)="fecharPedido()">Fazer Pedido</a>
+    <a class="simple-button-red" [class.hidden-element]="isPedidoFeito" (click)="showMenu = !showMenu">Voltar</a>
+</nav>

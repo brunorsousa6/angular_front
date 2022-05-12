@@ -1,0 +1,27 @@
+.logo {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1rem;
+}
+
+.logo h4 {
+    font-size: 1.5rem;
+    color: #00386f;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
+.logo img {
+    width: 10vw; 
+}
+
+@media only screen and (min-width: 768px) {
+
+    .logo img {
+        width: 4vw;
+    }
+
+}

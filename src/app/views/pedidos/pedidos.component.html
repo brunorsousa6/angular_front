@@ -1,0 +1,21 @@
+<app-inner-header></app-inner-header>
+
+<section class="pedidos">
+    <div class="produtor">
+        <p>Produtor:</p>
+        <h1>{{ produtor.nomeProdutor || '-' }}</h1>
+        <p>Endereço:</p>
+        <h2>{{ produtor.enderecoProdutor || '-' }}</h2>
+        <p>Contato:</p>
+        <h2>{{ produtor.telefoneProdutor || '-' }}</h2>
+        <h2>{{ produtor.emailProdutor || '-' }}</h2>
+    </div>
+    <h1>Produtos</h1>
+
+    <div class="lista-produtos">
+        <app-item-pedido *ngFor="let produto of produtor.produtos" [produto]="produto" [idProdutor]="produtor.idProdutor"></app-item-pedido>
+    </div>
+    <p class="none-message" *ngIf="produtor.produtos && !produtor.produtos.length">Nenhum produto para listar.</p>
+</section>
+
+<app-carrinho class="carrinho-icon" [idProdutor]="produtor.idProdutor"></app-carrinho>

@@ -1,0 +1,8 @@
+<div class="item-container">
+    <div class="item-carrinho">
+        <p>{{ produto.nomePedido }}</p>
+        <p>{{ produto.quantidadePedido }}</p>
+        <p>{{ (produto.precoPedido | currency:'BRL') || '-' }}</p>
+        <a class="simple-button-red" (click)="removerProduto()">X</a>
+    </div>
+</div>

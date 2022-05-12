@@ -1,0 +1,127 @@
+.container {
+    height: 100vh;
+    position: relative;
+}
+
+#mapa {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+}
+
+.botao-voltar {
+    position: absolute;
+    z-index: 80;
+    top: 1.75rem;
+    left: 1.25rem;
+}
+
+.botao-voltar .botao {
+    width: 110px;
+    height: 40px;
+    box-sizing: border-box;
+    background-color: #00386f;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+.botao-voltar .botao:hover {
+    background-color: #0154a7;
+}
+
+.pesquisa {
+    position: absolute;
+    z-index: 80;
+    bottom: 8rem;
+    left: 10vw;
+    right: 10vw;
+    margin: 0 auto;
+    border: #00386f 3px solid;
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.input-pesquisa {
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+}
+
+.input-pesquisa:focus {
+    outline: none;
+}
+
+.submit-pesquisa {
+    background-color: #fff;
+    cursor: pointer;
+    padding: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 101;
+}
+
+.submit-pesquisa img {
+    width: 32px;
+}
+
+.distancia {
+    position: absolute;
+    z-index: 50;
+    bottom: 11rem;
+    left: 10vw;
+    right: 10vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.distancia ul {
+    list-style: none;
+}
+
+.distancia li {
+    display: inline-block;
+}
+
+.distancia input {
+    visibility: hidden;
+}
+
+.distancia label {
+    background-color: #00386f;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 0 4px;
+    cursor: pointer;
+}
+
+.distancia label:hover {
+    background-color: #0154a7;
+}
+
+.distancia input:checked + label {
+    background-color: #0154a7;
+}
+
+@media only screen and (min-width: 768px) {
+    
+    .pesquisa {
+        left: 35vw;
+        right: 35vw;
+    }
+
+    .distancia {
+        left: 35vw;
+        right: 35vw;
+    }
+}
