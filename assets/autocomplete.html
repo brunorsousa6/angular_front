@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <script src="https://cdn.maptiler.com/maptiler-geocoder/v1.1.0/maptiler-geocoder.js"></script>
+    <link href="https://cdn.maptiler.com/maptiler-geocoder/v1.1.0/maptiler-geocoder.css" rel="stylesheet" />
+  </head>
+  <style type="text/css">
+    *, html, body {
+      margin: 0;
+      padding: 0;
+    }
+    body, html {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      height: 2rem;
+    }
+    #search {
+      width: 85%;
+      border: none;
+    }
+    #search:focus {
+      outline: none;
+    }
+  </style>
+  <body>
+    <input id="search" type="text" autocomplete="off" placeholder="Ex.: Digite uma rua e cidade"/>
+    <script>
+      window.localStorage.setItem('inputPesquisa', '');
+      var geocoder = new maptiler.Geocoder({
+        input: 'search', // id of input element
+        key: 'rOWMCvQS4fuQOnVJzQEQ'
+      });
+      geocoder.on('select', function(item) {
+        document.getElementById('search').value = item.place_name;
+        window.localStorage.setItem('inputPesquisa', JSON.stringify(item));
+      });
+    </script>
+  </body>
+</html>
